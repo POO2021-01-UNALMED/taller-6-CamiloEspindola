@@ -13,8 +13,7 @@ public class Automovil extends Vehiculo{
 	}
 	
 
-	public Automovil(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, 
-	String traccion, Fabricante fabricante, int puestos) {
+	public Automovil(String placa,   String nombre, int precio, int peso, Fabricante fabricante, int puestos) {
 		super(placa, 4, 100, nombre, precio, peso, "FWD", fabricante);
 		this.puestos = puestos;
 		contador.add(this);
