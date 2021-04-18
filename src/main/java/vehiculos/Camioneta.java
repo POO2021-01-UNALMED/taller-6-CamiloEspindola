@@ -1,11 +1,10 @@
 package vehiculos;
-
 import java.util.ArrayList;
 
 public class Camioneta extends Vehiculo {
 
-	private boolean volco;
-	private static ArrayList<Camioneta>contador = new ArrayList<Camioneta>();
+	protected boolean volco;
+	protected static ArrayList<Camioneta>contador = new ArrayList<Camioneta>();
 	
 	public Camioneta() {
 		super();

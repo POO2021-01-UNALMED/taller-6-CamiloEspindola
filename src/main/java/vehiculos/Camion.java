@@ -1,11 +1,10 @@
 package vehiculos;
-
 import java.util.ArrayList;
 
 public class Camion extends Vehiculo {
 
-	private int ejes;
-	private static ArrayList<Camion>contador = new ArrayList<Camion>();
+	protected int ejes;
+	protected static ArrayList<Camion>contador = new ArrayList<Camion>();
 	
 	public Camion() {
 		super();

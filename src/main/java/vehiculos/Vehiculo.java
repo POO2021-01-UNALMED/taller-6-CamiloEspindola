@@ -1,19 +1,19 @@
 package vehiculos;
-
 import java.util.ArrayList;
 
 public class Vehiculo {
-	private String placa;
-	private int puertas;
-	private int velocidadMaxima;
-	private String nombre;
-	private int precio;
-	private int peso;
-	private String traccion;
-	private Fabricante fabricante;
+	protected String placa;
+	protected int puertas;
+	protected int velocidadMaxima;
+	protected String nombre;
+	protected int precio;
+	protected int peso;
+	protected String traccion;
+	protected Fabricante fabricante;
+	
+	
 	public static ArrayList<Vehiculo>contadorV = new ArrayList<Vehiculo>();
-	public static ArrayList<Pais>paisesRepetidos= new ArrayList<Pais>();
-	public static ArrayList<Pais>paisesSinRepetir= new ArrayList<Pais>();
+	
 	
 	static Automovil objA;
 	static Camion objB;
@@ -25,14 +25,19 @@ public class Vehiculo {
 	}
 	
 	public static int getCantidadVehiculos() {
-		return objA.getContador().size()+objB.getContador().size()+objC.getContador().size();
+		return contadorV.size();
 	}
 	
+	
+
+	public static void setCantidadVehiculos(int i) {
+
+    }
+	
 	public static String vehiculosPorTipo() {
-		return "Automoviles: "+objA.getContador().size()+"\n"
-		+"Camionetas: "+objC.getContador().size()+"\n"
-		+"Camiones: "+objB.getContador().size();
-		
+		return "Automoviles: "+Automovil.getContador().size()+"\n"
+		+"Camionetas: "+Camion.getContador().size()+"\n"
+		+"Camiones: "+Camioneta.getContador().size();	
 	}
 
 
@@ -49,48 +54,6 @@ public class Vehiculo {
 		this.fabricante = fabricante;
 	}
 	
-	
-	
-	public Pais paisMasVendedor() {
-		
-		for(int i=0; i<contadorV.size();  i++) {
-			paisesRepetidos.add(i, contadorV.get(i).getFabricante().getPais()); 	
-		}
-		for(int i=0; i<paisesRepetidos.size();  i++) {
-			while (true) {
-				if(i>paisesRepetidos.size()) {
-					break;
-				}
-				if(paisesSinRepetir.contains(paisesRepetidos.get(i))==true) {}
-				else {
-					paisesSinRepetir.add(paisesRepetidos.get(i));
-				}
-			}
-			
-		}
-		int a [] = new int [paisesSinRepetir.size()];
-		for(int i = 0; i < paisesSinRepetir.size(); i++) {
-			 
-			 for(int j = 0; j < paisesRepetidos.size(); j++) {
-				 if(paisesRepetidos.get(j)==paisesSinRepetir.get(i)) {
-					 a[i]+=1; 
-				 }
-				 
-			 }
-			
-		}
-		int mayor = 0;
-		int posicion = 0;
-		for(int i = 0; i < a.length; i++) {
-			if(a[i]>mayor)
-				mayor = a[i];
-				posicion = i;
-		}
-		return paisesSinRepetir.get(posicion);
-		
-	}
-
-
 	public String getPlaca() {
 		return placa;
 	}

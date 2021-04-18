@@ -2,11 +2,11 @@ package vehiculos;
 import java.util.ArrayList;
 
 
-
 public class Automovil extends Vehiculo{
 	
-	private int puestos;
-	private static ArrayList<Automovil>contador = new ArrayList<Automovil>();
+	protected int puestos;
+	protected static ArrayList<Automovil>contador = new ArrayList<Automovil>();
+	Vehiculo obj;
 	public Automovil() {
 		super();
 		
@@ -18,6 +18,7 @@ public class Automovil extends Vehiculo{
 		this.puestos = puestos;
 		contador.add(this);
 		contadorV.add(this);
+		
 	}
 	
 	public static ArrayList<Automovil> getContador() {
