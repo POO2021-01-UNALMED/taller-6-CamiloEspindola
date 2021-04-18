@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Fabricante {
 	private String nombre;
 	private Pais pais;
-	private static ArrayList<Fabricante> lista = new ArrayList<>();
+	private static ArrayList<Fabricante> contador = new ArrayList<>();
 	private int numVentas;
 	
 	public void nuevaVenta(){
@@ -14,8 +14,8 @@ public class Fabricante {
         return numVentas;
     }
 	public static Fabricante fabricaMayorVentas(){
-        Fabricante mayor = lista.get(0);
-        for(Fabricante f: lista){
+        Fabricante mayor = contador.get(0);
+        for(Fabricante f: contador){
             if(f.getVentas() > mayor.getVentas()){
                 mayor = f;
             }
@@ -27,7 +27,7 @@ public class Fabricante {
 		super();
 		this.nombre = nombre;
 		this.pais = pais;
-		lista.add(this);
+		contador.add(this);
 	}
 	public String getNombre() {
 		return nombre;

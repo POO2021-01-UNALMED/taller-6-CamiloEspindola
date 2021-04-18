@@ -28,7 +28,6 @@ public class Vehiculo {
 	}
 	
 	
-
 	public static void setCantidadVehiculos(int i) {
 
     }
