@@ -16,6 +16,7 @@ public class Pais {
 	public Pais(String nombre) {
 		super();
 		this.nombre = nombre;
+		contador.add(this);
 	}
 
 	public String getNombre() {
