@@ -28,7 +28,7 @@ public class Pais {
 		this.nombre = nombre;
 	}
 	
-	public Pais paisMasVendedor() {
+	public static Pais paisMasVendedor() {
 		
 		for(int i=0; i<Vehiculo.contadorV.size();  i++) {
 			paisesRepetidos.add(i, Vehiculo.contadorV.get(i).getFabricante().getPais()); 	
