@@ -1,6 +1,5 @@
 package vehiculos;
 import java.util.ArrayList;
-
 public class Pais {
 	private String nombre;
 	public static ArrayList<Pais>paisesRepetidos= new ArrayList<Pais>();

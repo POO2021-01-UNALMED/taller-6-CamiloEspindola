@@ -6,7 +6,6 @@ public class Fabricante {
 	private static ArrayList<Fabricante> lista = new ArrayList<>();
 	private int numVentas;
 	
-	
 	public void nuevaVenta(){
         numVentas++;
         pais.agregarVenta();

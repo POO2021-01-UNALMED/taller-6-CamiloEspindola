@@ -1,7 +1,6 @@
 package vehiculos;
 import java.util.ArrayList;
 
-
 public class Automovil extends Vehiculo{
 	
 	protected int puestos;

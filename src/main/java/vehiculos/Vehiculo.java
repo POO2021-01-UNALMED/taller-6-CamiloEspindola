@@ -1,6 +1,5 @@
 package vehiculos;
 import java.util.ArrayList;
-
 public class Vehiculo {
 	protected String placa;
 	protected int puertas;

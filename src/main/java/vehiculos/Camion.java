@@ -1,6 +1,7 @@
 package vehiculos;
 import java.util.ArrayList;
 
+
 public class Camion extends Vehiculo {
 
 	protected int ejes;
